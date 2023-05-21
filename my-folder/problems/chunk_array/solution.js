@@ -4,6 +4,8 @@
  * @return {Array[]}
  */
 var chunk = function(arr, size) {
+    if (arr.length === 0) return []
+    if (size > arr.length) return [arr]
     let out = []
     let sub = []
     for (let ele of arr) {
